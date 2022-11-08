@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        .map_containers {
+            border: #ddd solid 1px;
+        }
+
+        .map_count_container {
+            padding: 10px;
+
+        }
+
+        .map_count_container>p {
+            margin: 0;
+        }
+
+        .map_content_container {
+            display: flex;
+        }
+
+        .content_photo {
+            width: 30%;
+            padding: 10px;
+        }
+
+        .content_info_container {
+            width: 70%;
+            padding: 10px;
+        }
+
+        .content_photo>img {
+            width: 100%;
+        }
+
+        .info_title {
+            display: flex;
+            align-items: baseline;
+        }
+
+        .info_title>p {
+            padding: 0 10px 0 0px;
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        /* Chip CSS*/
+        .info_chip {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .info_chip>a {
+            text-decoration: solid;
+            background: #3188c7;
+            border: #3188c7 solid 1px;
+            color: #fff;
+            padding: 7px 20px;
+            border-radius: 20px;
+            margin: 5px 5px;
+        }
+
+        .info_chip>a:hover {
+            transition: background-color 0.2s ease-out 50ms;
+            color: #3188c7;
+            background: #fff;
+        }
+
+        /* End of Chip CSS*/
+        .info_button_container {
+            border-bottom: #ddd solid 1px;
+            text-align: -webkit-center;
+        }
+
+        .info_button {
+            display: block;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            color: #fff;
+            background-color: #3188c7;
+            border: 1px solid #3188c7;
+            cursor: pointer;
+            position: relative;
+            top: 25px;
+        }
+
+        .info_discription {
+            display: none;
+
+        }
+
+        .info_discription>p {
+            margin-top: 50px;
+        }
+
+        @media screen and (max-width: 767px) {
+
+            .map_content_container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .map_count_container {
+                text-align: center;
+            }
+
+            .content_photo {
+                width: 100%;
+            }
+
+            .content_info_container {
+                width: 90%;
+            }
+
+            .info_title {
+                display: block;
+                text-align: center;
+            }
+
+            .info_chip {
+                justify-content: center;
+            }
+        }
+    </style>
+    <div class="map_containers">
+
+        <div class="map_count_container">
+            <p>1</p>
+        </div>
+
+        <div class="map_content_container">
+
+            <div class="content_photo">
+                <img src="/img/st_peter_hall.jpg" alt="">
+            </div>
+
+            <div class="content_info_container">
+
+                <div class="info_title">
+                    <p class="title_zh">伯鐸樓</p>
+                    <p class="title_en">St.Peter Hall</p>
+                </div>
+
+                <p class="info_chip">
+                    <a href=""><span><i class="bi bi-youtube"></i>&ensp;導覽影片</span></a>
+                    <a href=""><span><i class="bi bi-headset-vr"></i>&ensp;線上實境導覽</span></a>
+                </p>
+
+
+                <div class="info_discription" id="st_peter">
+                    <p class="discription">
+                        伯鐸樓，位於圖書館旁，是遷校之初即建蓋的建築物之一。它的正面外牆，有一巨幅馬賽克圖像，那就是聖伯鐸——耶穌十二宗徒之首。在他宣認耶穌是「默西亞，永生天主之子」後，耶穌稱他為「伯鐸」（意思是磐石），並聲言要在這磐石上建立教會，還把「天國的鑰匙」交給他。西元67年，伯鐸於羅馬被釘十字架，為主殉道致命。聖經〈宗徒大事錄〉中提到：在聖神的助佑下，伯鐸能以各種語言，對不同地方的人們宣揚天主的福音。由於「伯鐸樓」是外語學院所在地，因此冀望在聖伯鐸的祈禱下，師生能致力於多種語言的學習與研究。
+                        伯鐸樓一樓中庭角落有一小水池，豎立著一座法蒂瑪聖母雕像。這是為紀念1917年5至10月，聖母瑪利亞在葡萄牙法蒂瑪（Fátima），連續六個月，每月13日，顯現給三位小牧童：露濟亞、方濟各、雅琴達，要他們每天熱心誦念玫瑰經，為蘇聯及罪人的回頭祈禱。聖母有如大家的母親，她親自教導我們如何謙卑服從天主，她是天人之間的中保，也不斷地為我們的需要向天主轉求。
+                    </p>
+                </div>
+                <div class="info_button_container">
+                    <button class="info_button"
+                        onclick="document.getElementById('st_peter').style.display=(document.getElementById('st_peter').style.display=='block')?'none':'block';"><i
+                            class="bi bi-caret-down-fill"></i></button>
+                </div>
+                <div class="info_office">
+                    <p>
+                        單位所在位置:<br>
+                        外語學院、中國文學系、英國文學系、西班牙文學系、日本語文學系、華語文教學中心、小劇場
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--End of St.Peter Hall-->
+</body>
+
+</html>
